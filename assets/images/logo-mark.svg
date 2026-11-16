@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bespoke Jewellery">
+  <title>Bespoke Jewellery</title>
+  <!-- Jharokha arch (outer, plum) -->
+  <path d="M12 59V33C12 22 21 14 32 8C43 14 52 22 52 33V59" fill="none" stroke="#3b0a24" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Inner arch (rani) -->
+  <path d="M19 59V35C19 27 25 21.5 32 17.5C39 21.5 45 27 45 35V59" fill="none" stroke="#c2185b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Finial -->
+  <circle cx="32" cy="3.6" r="2.4" fill="#f4a300"/>
+  <!-- Faceted gem -->
+  <path d="M27 31.5H37L42 37L32 51L22 37Z" fill="#f4a300"/>
+  <path d="M27 31.5L22 37H42L37 31.5M29.6 37L32 31.5L34.4 37M29.6 37L32 51L34.4 37" fill="none" stroke="#9c1149" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="M27 31.5H37L42 37L32 51L22 37Z" fill="none" stroke="#3b0a24" stroke-width="1.4" stroke-linejoin="round"/>
+  <!-- Plinth -->
+  <path d="M7 59.5H57" stroke="#3b0a24" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

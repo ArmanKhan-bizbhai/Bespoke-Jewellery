@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#3b0a24">
+    <meta name="description" content="Bespoke Jewellery is a concept collection of modern jewellery for everyday moments and celebrations.">
+    <meta name="author" content="BizBhai">
+    <title>Bespoke Jewellery — Modern heirlooms</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <script>
+      /* Motion is opt-in. The hidden start states in CSS only apply while .motion is set, and
+         the class is withdrawn if the script never takes over, so the page can't stay hidden. */
+      (function () {
+        var root = document.documentElement;
+        root.classList.add("js");
+        if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        root.classList.add("motion");
+        try { if (!sessionStorage.getItem("aurelle3:intro")) root.classList.add("first-visit"); } catch (_) {}
+        setTimeout(function () { if (!window.__aurelleReady) root.classList.remove("motion", "first-visit"); }, 2600);
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script src="./assets/vendor/gsap.min.js" defer></script>
+    <script src="./assets/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="./assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8.6 7H17v8.4" /></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15.5M13.5 6l6 6-6 6" /></symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4.5M10.5 6l-6 6 6 6" /></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.1C9.6 18.6 3.4 14.6 3.4 10.2A4.2 4.2 0 0 1 7.6 6c1.9 0 3.4 1.1 4.4 2.7C13 7.1 14.5 6 16.4 6a4.2 4.2 0 0 1 4.2 4.2c0 4.4-6.2 8.4-8.6 9.9Z" /></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.6" cy="10.6" r="6.1" /><path d="m15.2 15.2 4.9 4.9" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.6 4.5L19 7.5" /></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13" /></symbol>
+      <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5.5 12h13" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l-1 12h-11l-1-12Z" /><path d="M9 8V6.4A3 3 0 0 1 12 3.5a3 3 0 0 1 3 2.9V8" /></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6.5v11M15 6.5v11" /></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.5 6v12l9.5-6-9.5-6Z" /></symbol>
+      <symbol id="i-arch" viewBox="0 0 24 24"><path d="M5 21V11a7 7 0 0 1 14 0v10" /><path d="M9 21v-8.5a3 3 0 0 1 6 0V21" /></symbol>
+      <!-- WhatsApp glyph: Simple Icons (CC0-1.0). -->
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></symbol>
+    </svg>
+
+    <div class="intro" aria-hidden="true">
+      <div class="intro-curtain intro-curtain--rani"></div>
+      <div class="intro-curtain intro-curtain--plum">
+        <p class="intro-word"><span>B</span><span>E</span><span>S</span><span>P</span><span>O</span><span>K</span><span>E</span></p>
+        <p class="intro-sub">Jewellery</p>
+      </div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-bar">
+        <a class="wordmark" href="#top" aria-label="Bespoke Jewellery home"><img class="wordmark-logo" src="./assets/images/logo-mark.svg" alt="" width="40" height="40"><span class="wordmark-text"><span class="wordmark-name">BESPOKE</span><span class="wordmark-sub">JEWELLERY</span></span></a>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="#collection" data-section="collection">Collection</a></li>
+            <li><a class="nav-link" href="#occasions" data-section="occasions">Occasions</a></li>
+            <li><a class="nav-link" href="#atelier" data-section="atelier">The atelier</a></li>
+          </ul>
+          <a class="menu-wa" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about your jewellery." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>Chat on WhatsApp</a>
+          <p class="menu-note">A study in modern heirlooms</p>
+        </nav>
+        <div class="header-actions">
+          <a class="saved-nav" href="#collection" aria-label="Browse saved pieces">
+            <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
+            <span class="saved-label">Saved</span>
+            <span class="count-badge saved-count"><span id="saved-count">0</span></span>
+          </a>
+          <button class="bag-nav" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="bag-panel" aria-label="Open your bag, empty">
+            <svg class="icon" aria-hidden="true"><use href="#i-bag" /></svg>
+            <span class="bag-label">Bag</span>
+            <span class="count-badge bag-count"><span id="bag-count">0</span></span>
+          </button>
+          <p id="bag-status" class="sr-only" role="status" aria-live="polite"></p>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="menu-toggle-label">Menu</span>
+            <span class="menu-toggle-lines" aria-hidden="true"><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+      <span class="toran" aria-hidden="true"></span>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <svg class="hero-jaali" viewBox="0 0 400 520" aria-hidden="true" focusable="false">
+          <path pathLength="1" d="M20 520V200a180 180 0 0 1 360 0v320" />
+          <path pathLength="1" d="M60 520V210a140 140 0 0 1 280 0v310" />
+          <path pathLength="1" d="M100 520V220a100 100 0 0 1 200 0v300" />
+          <path pathLength="1" d="M140 520V230a60 60 0 0 1 120 0v290" />
+          <circle pathLength="1" cx="200" cy="120" r="10" />
+        </svg>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title" class="hero-title" data-lines>The pieces you keep <em>close.</em></h1>
+            <p class="hero-lede" data-hero-fade>Jewellery for the little rituals, the big days, and all the moments between.</p>
+            <div class="hero-actions" data-hero-fade>
+              <a class="tag-button" href="#collection"><span class="tag-label">Explore the collection</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+            </div>
+            <div class="hero-shortcuts" data-hero-fade>
+              <span class="shortcut-label">Explore by piece</span>
+              <a class="chip" href="#collection" data-select-category="Rings">Rings</a>
+              <a class="chip" href="#collection" data-select-category="Earrings">Earrings</a>
+              <a class="chip" href="#collection" data-select-category="Necklaces">Necklaces</a>
+            </div>
+          </div>
+
+          <section class="hero-offers" aria-labelledby="offers-title" aria-roledescription="carousel">
+            <h2 id="offers-title" class="sr-only">Festive offers</h2>
+            <div class="offers-stage">
+              <div class="offers-track">
+                <article class="offer is-active" role="group" aria-roledescription="slide" aria-label="1 of 4: Dhanteras Gold Days">
+                  <figure class="offer-photo" aria-hidden="true"><img src="./assets/images/gifting-auspicious.jpg" alt="" width="432" height="432" fetchpriority="high" decoding="async"></figure>
+                  <p class="offer-status"><span class="offer-dot" aria-hidden="true"></span>On now · till Dhanteras</p>
+                  <div class="offer-body">
+                    <h3 class="offer-title">Dhanteras Gold Days</h3>
+                    <p class="offer-line"><span class="offer-figure"><span class="offer-digits" data-value="10">10</span>%</span> off making charges on gold coins</p>
+                    <div class="offer-actions">
+                      <a class="tag-button tag-button--marigold" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Dhanteras Gold Days offer: 10% off making charges on gold coins." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span class="tag-label">Ask on WhatsApp</span></a>
+                      <a class="offer-browse" href="#collection">See the pieces</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="offer" role="group" aria-roledescription="slide" aria-label="2 of 4: Diwali, the Festival of Light">
+                  <figure class="offer-photo" aria-hidden="true"><img src="./assets/images/rivaah-necklace-set.jpg" alt="" width="432" height="432" decoding="async"></figure>
+                  <p class="offer-status"><span class="offer-dot" aria-hidden="true"></span>On now · till Diwali</p>
+                  <div class="offer-body">
+                    <h3 class="offer-title">Diwali, the Festival of&nbsp;Light</h3>
+                    <p class="offer-line"><span class="offer-figure"><span class="offer-digits" data-value="25">25</span>%</span> off making charges on gold jewellery</p>
+                    <div class="offer-actions">
+                      <a class="tag-button tag-button--marigold" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Diwali offer: 25% off making charges on gold jewellery." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span class="tag-label">Ask on WhatsApp</span></a>
+                      <a class="offer-browse" href="#collection">See the pieces</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="offer" role="group" aria-roledescription="slide" aria-label="3 of 4: The Bridal Edit">
+                  <figure class="offer-photo" aria-hidden="true"><img src="./assets/images/rivaah-pjws.jpg" alt="" width="432" height="432" decoding="async"></figure>
+                  <p class="offer-status">All wedding season</p>
+                  <div class="offer-body">
+                    <h3 class="offer-title">The Bridal Edit</h3>
+                    <p class="offer-line"><span class="offer-figure"><span class="offer-digits" data-value="20">20</span>%</span> off diamond bridal sets, with a styling session</p>
+                    <div class="offer-actions">
+                      <a class="tag-button tag-button--marigold" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Bridal Edit offer: 20% off diamond bridal sets, with a styling session." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span class="tag-label">Ask on WhatsApp</span></a>
+                      <a class="offer-browse" href="#collection">See the pieces</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="offer" role="group" aria-roledescription="slide" aria-label="4 of 4: Diamond Days">
+                  <figure class="offer-photo" aria-hidden="true"><img src="./assets/images/rivaah-diamond-jewellery.jpg" alt="" width="432" height="432" decoding="async"></figure>
+                  <p class="offer-status">Every weekend</p>
+                  <div class="offer-body">
+                    <h3 class="offer-title">Diamond Days</h3>
+                    <p class="offer-line"><span class="offer-figure"><span class="offer-digits" data-value="15">15</span>%</span> off diamond value on solitaires</p>
+                    <div class="offer-actions">
+                      <a class="tag-button tag-button--marigold" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Diamond Days offer: 15% off diamond value on solitaires." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span class="tag-label">Ask on WhatsApp</span></a>
+                      <a class="offer-browse" href="#collection">See the pieces</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="offers-controls" data-hero-fade>
+              <div class="offers-tabs" role="group" aria-label="Choose an offer">
+                <button class="offers-tab is-active" type="button" data-offer="0" aria-pressed="true" aria-label="Show the Dhanteras offer">Dhanteras</button>
+                <button class="offers-tab" type="button" data-offer="1" aria-pressed="false" aria-label="Show the Diwali offer">Diwali</button>
+                <button class="offers-tab" type="button" data-offer="2" aria-pressed="false" aria-label="Show the Bridal offer">Bridal</button>
+                <button class="offers-tab" type="button" data-offer="3" aria-pressed="false" aria-label="Show the Diamond Days offer">Diamonds</button>
+              </div>
+              <div class="offers-nav">
+                <button class="square-button offers-prev" type="button" aria-label="Previous offer"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left" /></svg></button>
+                <button class="clock-button offers-pause" type="button" aria-label="Pause the offers">
+                  <svg class="clock-ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="clock-track" cx="24" cy="24" r="21" /><circle class="clock-fill" cx="24" cy="24" r="21" pathLength="100" /></svg>
+                  <svg class="icon icon-pause" aria-hidden="true"><use href="#i-pause" /></svg><svg class="icon icon-play" aria-hidden="true"><use href="#i-play" /></svg>
+                </button>
+                <button class="square-button offers-next" type="button" aria-label="Next offer"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></button>
+              </div>
+            </div>
+            <p class="offers-status sr-only" role="status" aria-live="polite"></p>
+          </section>
+        </div>
+      </section>
+
+      <section id="categories" class="categories" aria-labelledby="categories-title">
+        <div class="categories-pin">
+          <div class="container categories-inner">
+            <div class="categories-rail">
+              <div class="section-head categories-head">
+                <h2 id="categories-title" class="section-title" data-lines>Shop by <em>category.</em></h2>
+                <p class="section-note" data-fade>Start with a piece you love, then make it your own.</p>
+              </div>
+              <a class="category-card" href="#collection" data-select-category="Rings">
+                <span class="category-index" aria-hidden="true">01</span>
+                <span class="category-media"><img src="./assets/images/solitaire-desktop.jpg" alt="Solitaire ring and matching stud earrings on deep blue velvet" width="400" height="400" loading="lazy" decoding="async"></span>
+                <span class="category-body">
+                  <span class="category-name">Rings</span>
+                  <span class="category-note">Little circles, lasting stories.</span>
+                </span>
+                <span class="category-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+              </a>
+              <a class="category-card" href="#collection" data-select-category="Earrings">
+                <span class="category-index" aria-hidden="true">02</span>
+                <span class="category-media"><img src="./assets/images/gifting-below-25k.jpg" alt="Pair of openwork gold dome stud earrings on linen" width="300" height="300" loading="lazy" decoding="async"></span>
+                <span class="category-body">
+                  <span class="category-name">Earrings</span>
+                  <span class="category-note">An everyday point of light.</span>
+                </span>
+                <span class="category-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+              </a>
+              <a class="category-card" href="#collection" data-select-category="Necklaces">
+                <span class="category-index" aria-hidden="true">03</span>
+                <span class="category-media"><img src="./assets/images/auspicious-trending.jpg" alt="Gold temple pendant set with rubies on a fine box chain, lit against deep green" width="600" height="750" loading="lazy" decoding="async"></span>
+                <span class="category-body">
+                  <span class="category-name">Necklaces</span>
+                  <span class="category-note">The detail closest to heart.</span>
+                </span>
+                <span class="category-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+              </a>
+              <a class="category-card" href="#collection" data-select-category="Bracelets">
+                <span class="category-index" aria-hidden="true">04</span>
+                <span class="category-media"><img src="./assets/images/gifting-1l-above.jpg" alt="Two-tone gold slider bracelet with a wave of diamond-cut beads" width="300" height="300" loading="lazy" decoding="async"></span>
+                <span class="category-body">
+                  <span class="category-name">Bracelets</span>
+                  <span class="category-note">A gesture worth keeping.</span>
+                </span>
+                <span class="category-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+              </a>
+            </div>
+            <div class="rail-progress" aria-hidden="true"><span></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collection" class="collection section" aria-labelledby="collection-title">
+        <div class="container">
+          <div class="section-head section-head--split">
+            <h2 id="collection-title" class="section-title" data-lines>Pieces for <em>your story.</em></h2>
+            <p class="section-note" data-fade>Explore six considered forms for the days you want to remember.</p>
+          </div>
+
+          <div class="catalog-controls" data-fade>
+            <div class="search-field">
+              <label for="catalog-search">Search the collection</label>
+              <div class="search-input">
+                <svg class="icon" aria-hidden="true"><use href="#i-search" /></svg>
+                <input id="catalog-search" type="search" autocomplete="off" placeholder="Try rings or hoops">
+              </div>
+            </div>
+            <div class="filter-area">
+              <span class="filter-label" id="filter-label">Browse</span>
+              <div class="filter-list" role="group" aria-labelledby="filter-label">
+                <button class="filter-button is-active" type="button" data-filter="All" aria-pressed="true">All</button>
+                <button class="filter-button" type="button" data-filter="Rings" aria-pressed="false">Rings</button>
+                <button class="filter-button" type="button" data-filter="Earrings" aria-pressed="false">Earrings</button>
+                <button class="filter-button" type="button" data-filter="Necklaces" aria-pressed="false">Necklaces</button>
+                <button class="filter-button" type="button" data-filter="Bracelets" aria-pressed="false">Bracelets</button>
+                <span class="filter-marker" aria-hidden="true"></span>
+              </div>
+            </div>
+            <label class="saved-filter"><input id="saved-only" type="checkbox"><span class="switch" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg></span> Saved only</label>
+          </div>
+
+          <div class="results-line"><p id="result-count" role="status" aria-live="polite">Showing 6 pieces</p><span>Concept collection, 2026</span></div>
+
+          <div id="product-grid" class="catalog-grid">
+            <article class="product" data-id="arc-ring" data-category="Rings" data-search="arc ring rings soft curve everyday">
+              <div class="product-media"><img src="./assets/images/ring-3-4-26.jpg" alt="Two-tone gold ring set with a wave of diamonds, resting on teal silk" width="552" height="672" loading="lazy" decoding="async"><button class="save-button" type="button" data-save="arc-ring" aria-pressed="false" aria-label="Save Arc Ring"><svg class="icon icon-heart" aria-hidden="true"><use href="#i-heart" /></svg><span class="save-label sr-only">Save</span></button></div>
+              <div class="product-body">
+                <span class="product-category">Rings</span>
+                <h3 class="product-name">Arc Ring</h3>
+                <p class="product-line">A soft curve for every day.</p>
+                <span class="product-edit">The Everyday Edit</span>
+                <div class="product-actions"><button class="add-button" type="button" data-add="arc-ring" aria-label="Add Arc Ring to your bag"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg><span class="add-label">Add to bag</span></button><a class="ask-button" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Arc Ring." target="_blank" rel="noopener noreferrer" aria-label="Ask about the Arc Ring on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span>Ask</span></a></div>
+              </div>
+            </article>
+            <article class="product" data-id="noor-drops" data-category="Earrings" data-search="noor drops earrings light catching gentle fall">
+              <div class="product-media"><img src="./assets/images/earrings-3-4-26.jpg" alt="Gold jhumka drop earrings standing on teal silk" width="552" height="672" loading="lazy" decoding="async"><button class="save-button" type="button" data-save="noor-drops" aria-pressed="false" aria-label="Save Noor Drops"><svg class="icon icon-heart" aria-hidden="true"><use href="#i-heart" /></svg><span class="save-label sr-only">Save</span></button></div>
+              <div class="product-body">
+                <span class="product-category">Earrings</span>
+                <h3 class="product-name">Noor Drops</h3>
+                <p class="product-line">Light-catching with a gentle fall.</p>
+                <span class="product-edit">The Occasion Edit</span>
+                <div class="product-actions"><button class="add-button" type="button" data-add="noor-drops" aria-label="Add Noor Drops to your bag"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg><span class="add-label">Add to bag</span></button><a class="ask-button" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Noor Drops." target="_blank" rel="noopener noreferrer" aria-label="Ask about the Noor Drops on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span>Ask</span></a></div>
+              </div>
+            </article>
+            <article class="product" data-id="stillline-pendant" data-category="Necklaces" data-search="stillline pendant necklaces point light close heart">
+              <div class="product-media"><img src="./assets/images/gifting-25k-50k.jpg" alt="Gold star pendant set with diamonds on a fine chain, against pink petals" width="300" height="300" loading="lazy" decoding="async"><button class="save-button" type="button" data-save="stillline-pendant" aria-pressed="false" aria-label="Save Stillline Pendant"><svg class="icon icon-heart" aria-hidden="true"><use href="#i-heart" /></svg><span class="save-label sr-only">Save</span></button></div>
+              <div class="product-body">
+                <span class="product-category">Necklaces</span>
+                <h3 class="product-name">Stillline Pendant</h3>
+                <p class="product-line">A point of light, close to heart.</p>
+                <span class="product-edit">The Everyday Edit</span>
+                <div class="product-actions"><button class="add-button" type="button" data-add="stillline-pendant" aria-label="Add Stillline Pendant to your bag"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg><span class="add-label">Add to bag</span></button><a class="ask-button" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Stillline Pendant." target="_blank" rel="noopener noreferrer" aria-label="Ask about the Stillline Pendant on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span>Ask</span></a></div>
+              </div>
+            </article>
+            <article class="product" data-id="gather-bangle" data-category="Bracelets" data-search="gather bangle bracelets simple circle gesture">
+              <div class="product-media"><img src="./assets/images/bangles-3-4-26.jpg" alt="Rose gold bangle with a diamond zigzag, resting on teal silk" width="552" height="672" loading="lazy" decoding="async"><button class="save-button" type="button" data-save="gather-bangle" aria-pressed="false" aria-label="Save Gather Bangle"><svg class="icon icon-heart" aria-hidden="true"><use href="#i-heart" /></svg><span class="save-label sr-only">Save</span></button></div>
+              <div class="product-body">
+                <span class="product-category">Bracelets</span>
+                <h3 class="product-name">Gather Bangle</h3>
+                <p class="product-line">A simple circle to return to.</p>
+                <span class="product-edit">The Heirloom Edit</span>
+                <div class="product-actions"><button class="add-button" type="button" data-add="gather-bangle" aria-label="Add Gather Bangle to your bag"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg><span class="add-label">Add to bag</span></button><a class="ask-button" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Gather Bangle." target="_blank" rel="noopener noreferrer" aria-label="Ask about the Gather Bangle on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span>Ask</span></a></div>
+              </div>
+            </article>
+            <article class="product" data-id="solstice-band" data-category="Rings" data-search="solstice band rings clean lines enduring gesture">
+              <div class="product-media"><img src="./assets/images/jewellery-care-guide.jpg" alt="Hands polishing a diamond ring with a soft cloth" width="432" height="432" loading="lazy" decoding="async"><button class="save-button" type="button" data-save="solstice-band" aria-pressed="false" aria-label="Save Solstice Band"><svg class="icon icon-heart" aria-hidden="true"><use href="#i-heart" /></svg><span class="save-label sr-only">Save</span></button></div>
+              <div class="product-body">
+                <span class="product-category">Rings</span>
+                <h3 class="product-name">Solstice Band</h3>
+                <p class="product-line">Clean lines for an enduring gesture.</p>
+                <span class="product-edit">The Heirloom Edit</span>
+                <div class="product-actions"><button class="add-button" type="button" data-add="solstice-band" aria-label="Add Solstice Band to your bag"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg><span class="add-label">Add to bag</span></button><a class="ask-button" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Solstice Band." target="_blank" rel="noopener noreferrer" aria-label="Ask about the Solstice Band on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span>Ask</span></a></div>
+              </div>
+            </article>
+            <article class="product" data-id="svara-hoops" data-category="Earrings" data-search="svara hoops earrings sculptural familiar form">
+              <div class="product-media product-media--hoops"><img src="./assets/images/stunning-every-ear.jpg" alt="Pair of diamond-lined gold hoop earrings on warm satin" width="813" height="476" loading="lazy" decoding="async"><button class="save-button" type="button" data-save="svara-hoops" aria-pressed="false" aria-label="Save Svara Hoops"><svg class="icon icon-heart" aria-hidden="true"><use href="#i-heart" /></svg><span class="save-label sr-only">Save</span></button></div>
+              <div class="product-body">
+                <span class="product-category">Earrings</span>
+                <h3 class="product-name">Svara Hoops</h3>
+                <p class="product-line">A sculptural note in familiar form.</p>
+                <span class="product-edit">The Everyday Edit</span>
+                <div class="product-actions"><button class="add-button" type="button" data-add="svara-hoops" aria-label="Add Svara Hoops to your bag"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg><span class="add-label">Add to bag</span></button><a class="ask-button" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about the Svara Hoops." target="_blank" rel="noopener noreferrer" aria-label="Ask about the Svara Hoops on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg><span>Ask</span></a></div>
+              </div>
+            </article>
+          </div>
+
+          <div id="catalog-empty" class="catalog-empty" hidden>
+            <h3>No pieces found</h3>
+            <p>Try a different search or see the full collection.</p>
+            <button id="clear-filters" class="tag-button tag-button--outline" type="button"><span class="tag-label">Show all pieces</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="occasions" class="occasions" aria-labelledby="occasions-title" data-edit="0">
+        <div class="occasions-pin">
+          <div class="container occasions-inner">
+            <div class="section-head occasions-head">
+              <h2 id="occasions-title" class="section-title" data-lines>For the moments <em>that matter.</em></h2>
+              <p class="section-note" data-fade>Follow the feeling. Find the piece that stays with it.</p>
+            </div>
+
+            <div class="edits" role="region" aria-roledescription="carousel" aria-label="Occasion edits" tabindex="0">
+              <div class="edits-stage">
+                <article class="edit is-active" role="group" aria-roledescription="slide" aria-label="1 of 3, Everyday" aria-hidden="false">
+                  <figure class="edit-media"><img src="./assets/images/mangalsutra-3-4-26.jpg" alt="Fine gold mangalsutra with a filigree flower drop, laid over sea-green velvet" width="552" height="672" loading="lazy" decoding="async"></figure>
+                  <div class="edit-copy">
+                    <span class="edit-number" aria-hidden="true">01</span>
+                    <span class="edit-name">The Everyday Edit</span>
+                    <h3 class="edit-title">Beauty in the <em>ordinary.</em></h3>
+                    <p>Small pieces that become part of your everyday rhythm.</p>
+                  </div>
+                </article>
+                <article class="edit" role="group" aria-roledescription="slide" aria-label="2 of 3, Celebrations" aria-hidden="true">
+                  <figure class="edit-media"><img src="./assets/images/gifting-wedding.jpg" alt="Layered gold necklaces, a bridal choker and bangles arranged on jewellery boxes for a wedding" width="432" height="432" loading="lazy" decoding="async"></figure>
+                  <div class="edit-copy">
+                    <span class="edit-number" aria-hidden="true">02</span>
+                    <span class="edit-name">The Occasion Edit</span>
+                    <h3 class="edit-title">For all that <em>glows.</em></h3>
+                    <p>Considered details for gatherings, milestones, and everything in between.</p>
+                  </div>
+                </article>
+                <article class="edit" role="group" aria-roledescription="slide" aria-label="3 of 3, Heirloom" aria-hidden="true">
+                  <figure class="edit-media"><img src="./assets/images/rivaah-glass-kundan.jpg" alt="Antique gold necklace and chandelier earrings set with pink and green enamel" width="432" height="432" loading="lazy" decoding="async"></figure>
+                  <div class="edit-copy">
+                    <span class="edit-number" aria-hidden="true">03</span>
+                    <span class="edit-name">The Heirloom Edit</span>
+                    <h3 class="edit-title">Made to be <em>remembered.</em></h3>
+                    <p>Forms that hold a story and invite a new one.</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="edits-controls">
+                <div class="edits-dots" role="group" aria-label="Choose an occasion edit">
+                  <button class="edits-dot is-active" type="button" data-edit="0" aria-label="Show Everyday edit" aria-pressed="true"><span class="dot-bar" aria-hidden="true"></span><span class="dot-name">Everyday</span></button>
+                  <button class="edits-dot" type="button" data-edit="1" aria-label="Show Celebrations edit" aria-pressed="false"><span class="dot-bar" aria-hidden="true"></span><span class="dot-name">Celebrations</span></button>
+                  <button class="edits-dot" type="button" data-edit="2" aria-label="Show Heirloom edit" aria-pressed="false"><span class="dot-bar" aria-hidden="true"></span><span class="dot-name">Heirloom</span></button>
+                </div>
+                <div class="edits-nav">
+                  <span class="edits-count" aria-hidden="true"><span class="count-window"><span class="count-current">1</span></span><span class="count-total">/ 3</span></span>
+                  <button id="edits-prev" class="square-button" type="button" aria-label="Previous occasion edit" disabled><svg class="icon" aria-hidden="true"><use href="#i-arrow-left" /></svg></button>
+                  <button id="edits-next" class="square-button" type="button" aria-label="Next occasion edit"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg></button>
+                </div>
+              </div>
+              <p id="edits-status" class="sr-only" role="status" aria-live="polite">Everyday edit, slide 1 of 3</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="atelier" class="atelier section" aria-labelledby="atelier-title">
+        <div class="container atelier-grid">
+          <figure class="atelier-media">
+            <img src="./assets/images/rivaah-jwgs.jpg" alt="Gold coin necklace with pink stones laid beside a carved wooden jewellery box" width="432" height="432" loading="lazy" decoding="async">
+          </figure>
+          <div class="atelier-copy">
+            <h2 id="atelier-title" class="section-title" data-lines>A little more <em>meaning.</em></h2>
+            <p class="atelier-statement" data-highlight>Bespoke Jewellery begins with a simple thought: the pieces we reach for often become part of the stories we tell. This collection explores familiar forms with a fresh point of view.</p>
+            <a class="tag-button tag-button--outline" href="#collection" data-fade><span class="tag-label">Return to the collection</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right" /></svg></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="wa-float" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about your jewellery." target="_blank" rel="noopener noreferrer" aria-label="Chat with Bespoke Jewellery on WhatsApp">
+      <svg class="wa-ring" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <defs><path id="wa-ring-path" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0" /></defs>
+        <text><textPath href="#wa-ring-path" textLength="232">CHAT WITH US • CHAT WITH US •</textPath></text>
+      </svg>
+      <span class="wa-core"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg></span>
+    </a>
+
+    <div class="bag-scrim" hidden></div>
+    <aside id="bag-panel" class="bag-panel" role="dialog" aria-modal="true" aria-labelledby="bag-title" tabindex="-1" hidden>
+      <span class="bag-handle" aria-hidden="true"></span>
+      <div class="bag-head">
+        <h2 id="bag-title">Your bag</h2>
+        <button class="bag-close square-button" type="button" aria-label="Close bag"><svg class="icon" aria-hidden="true"><use href="#i-close" /></svg></button>
+      </div>
+      <p id="bag-empty" class="bag-empty">Nothing here yet. Add a piece from the collection and it will wait for you.</p>
+      <ul id="bag-items" class="bag-items"></ul>
+      <div class="bag-foot">
+        <div class="bag-total"><span>Total</span><span>Priced on request</span></div>
+        <a class="tag-button bag-request" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to book an appointment." target="_blank" rel="noopener noreferrer"><span class="tag-label">Request on WhatsApp</span><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg></a>
+        <p class="bag-note">Your list opens in WhatsApp so we can arrange a viewing. No products are currently available for purchase.</p>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <p class="footer-line">Modern forms for the moments you keep close.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#categories">Categories</a>
+          <a href="#collection">Collection</a>
+          <a href="#occasions">Occasions</a>
+          <a href="#atelier">The atelier</a>
+          <a class="footer-wa" href="https://wa.me/910000000000" data-wa="Hello Bespoke Jewellery, I'd like to know more about your jewellery." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>Chat on WhatsApp · +91 00000 00000</a>
+        </nav>
+      </div>
+      <div class="footer-mark" aria-hidden="true"><span>B</span><span>e</span><span>s</span><span>p</span><span>o</span><span>k</span><span>e</span></div>
+      <div class="container footer-bottom">
+        <div class="footer-credit">
+          <span>© Bespoke Jewellery concept, 2026</span>
+          <span>Designed &amp; developed by <a href="https://bizbhai.com" target="_blank" rel="noopener">BizBhai</a></span>
+        </div>
+        <div class="footer-disclaimer">
+          <p class="footer-disclaimer-title">Concept Website • Demo Experience</p>
+          <p>This website is created for demonstration purposes. No products are currently available for purchase.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
