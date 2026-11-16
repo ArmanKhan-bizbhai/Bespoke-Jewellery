@@ -387,14 +387,9 @@ section[tabindex="-1"]:focus { outline: none; }
   line-height: 1;
   text-decoration: none;
 }
-.wordmark-logo { width: 44px; height: 44px; flex: none; }
-.wordmark-text { display: flex; flex-direction: column; gap: 3px; }
-.wordmark-name { font-size: 27px; letter-spacing: 0.08em; }
-.wordmark-sub { font-size: 12px; font-weight: 700; letter-spacing: 0.36em; color: var(--rani); }
+.wordmark-logo { display: block; width: auto; height: 52px; }
 @media (max-width: 420px) {
-  .wordmark-logo { width: 34px; height: 34px; }
-  .wordmark-name { font-size: 22px; }
-  .wordmark-sub { font-size: 9px; letter-spacing: 0.36em; }
+  .wordmark-logo { height: 44px; }
 }
 
 .primary-navigation { margin-inline: auto; }
