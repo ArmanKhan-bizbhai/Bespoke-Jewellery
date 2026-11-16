@@ -36,7 +36,7 @@
    * business number is known; the markup carries the same number as a
    * fallback href, so replace both.
    * ------------------------------------------------------------------ */
-  const WHATSAPP_NUMBER = "910000000000";
+  const WHATSAPP_NUMBER = "917906044943";
   const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
   for (const link of $$("a[data-wa]")) link.href = waLink(link.dataset.wa);
 

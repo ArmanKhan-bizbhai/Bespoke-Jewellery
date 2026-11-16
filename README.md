@@ -30,7 +30,7 @@ Point the site at this repository's `main` branch with the **repository root as 
 
 ## Things to change for a real client
 
-- **WhatsApp number:** replace `910000000000` in `assets/js/site.js` (`WHATSAPP_NUMBER`) **and** in the `href`s in `index.html`. The footer also shows `+91 00000 00000`.
+- **WhatsApp number:** currently `917906044943`. To change it, replace it in `assets/js/site.js` (`WHATSAPP_NUMBER`) **and** in the `href`s in `index.html`. The footer also shows `+91 79060 44943`.
 - **Brand name:** "Bespoke Jewellery" appears in the copy, the WhatsApp messages and the footer wordmark.
 - **Photos:** the photos are placeholders taken from a retailer's site and are **not licensed**. Replace them before any public or commercial use.
 
